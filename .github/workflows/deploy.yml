@@ -50,14 +50,15 @@ jobs:
           # We create this directory to place our generated PDF into.
           mkdir -p .build content/pdf
           
-          # Step 1: Convert your YAML CV to a temporary JSON file in the .build directory.
-          python -c "import yaml, json; print(json.dumps(yaml.safe_load(open('content/data/cv.yml'))))" > .build/resume.json
+          # # Step 1: Convert your YAML CV to a temporary JSON file in the .build directory.
+          # python -c "import yaml, json; print(json.dumps(yaml.safe_load(open('content/data/cv.yml'))))" > .build/resume.json
           
           # Step 2: Generate the PDF, reading the temporary JSON file from the .build directory.
           echo "Validating resume.json"
-          npx resumed validate .build/resume.json
+          # npx resumed validate .build/resume.json
+          npx resumed validate content/data/resume.json
           
-          npx resumed export .build/resume.json --output output/pdf/CV.pdf --theme jsonresume-theme-class 
+          npx resumed export content/data/resume.json --output output/pdf/CV.pdf --theme jsonresume-theme-class 
           echo "CV.pdf successfully generated at content/pdf/CV.pdf"
           
           # Step 3: Clean up the intermediate build directory and its contents.
