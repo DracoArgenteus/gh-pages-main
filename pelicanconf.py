@@ -31,9 +31,10 @@ SITEURL = ''
 THEME = 'al_folio_theme'
 PATH = 'content'
 
-TIMEZONE = 'America/Ensenada'
+TIMEZONE = 'Europe/Copenhagen'
 
 DEFAULT_LANG = 'en'
+# DEFAULT_DATE_FORMAT !!!
 
 ARTICLE_URL = 'posts/{date:%Y}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{slug}/index.html'
@@ -41,6 +42,7 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}/{slug}/index.html'
 FORMATTED_FIELDS = []
 
 if SITE["blog_enabled"]:
+
     INDEX_SAVE_AS = '/posts/index.html'
     ARTICLE_PATHS=['posts']
 
@@ -57,6 +59,7 @@ if SITE["blog_enabled"]:
     TAGS_SAVE_AS = 'posts/tag/index.html'
 
 else:
+
     INDEX_SAVE_AS = ''
     ARTICLE_PATHS=[]
 
@@ -79,7 +82,7 @@ ARCHIVES_SAVE_AS = ''
 
 
 PAGE_PATHS = ['pages', 'projects']
-PATH_METADATA = '(?P<path_no_ext>.*)\..*'
+PATH_METADATA = r'(?P<path_no_ext>.*)\..*'
 PAGE_URL = '{path_no_ext}/'
 PAGE_SAVE_AS = '{path_no_ext}/index.html'
 
@@ -146,7 +149,7 @@ SITEMAP = {
     },
     "exclude": [
             "^/noindex/",  # starts with "/noindex/"
-            "posts/\d+/$",
+            r"posts/\d+/$",
             "posts/category/",
             "posts/page/",
             "posts/tag/",

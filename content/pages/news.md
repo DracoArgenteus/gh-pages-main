@@ -3,15 +3,17 @@ title: news
 template: news_archive 
 nav: false 
 summary: An archive of announcements.
+status: published
+
 
 entries:
   - date: 2016-01-15 
     content: |
       A simple inline announcement with emoji! ✨😄
 
-  - date: 2015-11-07 
-    content: |
-      [A long announcement with details]({filename}/posts/announcement.md)
+  # - date: 2015-11-07 
+  #   content: |
+  #     [A long announcement with details]({filename}/posts/announcement.md)
 
   - date: 2015-10-22 
     content: |

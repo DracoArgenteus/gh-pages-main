@@ -3,20 +3,20 @@
 # -----------------------------------------------------------------------------
 
 title: # the website title (if blank, full name will be used instead)
-first_name: You 
-middle_name: R.
-last_name: Name 
+first_name: Mark 
+middle_name: B.H.
+last_name: Sørensen
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: Design based on al-folio adapted for Pelican. 
-keywords: physics, mathematics 
+keywords: physics, nanoscience, chemistry 
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 # For both fields below, do not include leading / trailing slashes. 
-url: https://vbharadwaj-bk.github.io # the base hostname & protocol for your site
-baseurl: test  
+url: https://dracoargenteus.github.io # the base hostname & protocol for your site
+baseurl: /  
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -38,13 +38,13 @@ footer_fixed: true
 # Each dropdown must have a title, nav_order, and children that
 # are each a link (you can use markdown and Pelican attach / filename)
 # syntax) or the string "divider".
-dropdowns:
-  - title: submenus
-    nav_order: 7
-    children:
-      - "[talks]({filename}/pages/talks.md)"
-      - "divider"
-      - "[teaching]({filename}/pages/teaching.md)"
+# dropdowns:
+#   - title: submenus
+#     nav_order: 7
+#     children:
+#       - "[talks]({filename}/pages/talks.md)"
+#       - "divider"
+#       - "[teaching]({filename}/pages/teaching.md)"
 
 # Dimensions
 max_width: 850px
@@ -55,24 +55,24 @@ max_width: 850px
 # Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
 # -----------------------------------------------------------------------------
 email: 
-github_username: test
-gitlab_username: test
-twitter_username: test 
-mastodon_username: test 
-linkedin_username: test 
+github_username: DracoArgenteus
+gitlab_username:
+twitter_username:
+mastodon_username: 
+linkedin_username: test
 telegram_username: 
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-orcid_id: # your ORCID ID
+orcid_id: test # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
@@ -87,7 +87,7 @@ wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
 dblp_url: # your DBLP profile url
 stackoverflow_id: # your stackoverflow id
-kaggle_id: # your kaggle id
+kaggle_id: test # your kaggle id
 lastfm_id: # your lastfm id
 spotify_id: # your spotify id
 pinterest_id: # your pinterest id
@@ -115,7 +115,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_enabled: true 
+blog_enabled: false
 blog_name: al-folio # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description: a simple whitespace theme for academics
@@ -181,7 +181,7 @@ enable_google_verification: false  # enables google site verification
 enable_bing_verification:   false  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arrangement
 enable_math:                true   # enables math typesetting (uses MathJax)
-enable_tooltips:            false  # enables automatic tooltip links generated
+enable_tooltips:            true  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 enable_darkmode:            true # enables switching between light/dark modes
 enable_project_categories:  true   # enables categorization of projects into
@@ -222,3 +222,18 @@ mdb:
 medium_zoom:
   version: "1.0.8"
   integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
+
+
+
+
+
+
+# -----------------------------------------------------------------------------
+# Content to exclude
+# -----------------------------------------------------------------------------
+
+# exclude:
+#   - /pages/publications.md
+#   # - _posts/
+#   # - _projects/?_project.md
+#   # - assets/jupyter/blog.ipynb

@@ -4,6 +4,7 @@ template: teaching
 nav: false 
 nav_order: 5
 summary: Courses you've taught / TA'd for. 
+status: skip
 
 courses:
   - title: "[Test course 1](https://www.caltech.edu)"
