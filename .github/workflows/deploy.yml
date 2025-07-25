@@ -40,16 +40,17 @@ jobs:
           # Install Pelican and other site dependencies from your requirements.txt
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-          # install @rbardini/resumed and the jsonresume-theme-class theme 
+          # install @rbardini/resumed and the jsonresume-theme-class theme
           # npm install resumed jsonresume-theme-class # or your theme of choice
-          npm install resumed jsonresume-theme-even # or your theme of choice
+          npm install resumed jsonresume-theme-even puppeteer # or your theme of choice
 
       - name: Generate PDF from CV
         run: |
           echo "Generating PDF from content/data/cv.yml..."
           # The al-folio-python template is configured to copy static files from 'content/extra'.
           # We create this directory to place our generated PDF into.
-          mkdir -p .build content/pdf
+          # mkdir -p .build content/pdf
+          mkdir -p content/pdf
           
           # # Step 1: Convert your YAML CV to a temporary JSON file in the .build directory.
           # python -c "import yaml, json; print(json.dumps(yaml.safe_load(open('content/data/cv.yml'))))" > .build/resume.json
@@ -62,8 +63,8 @@ jobs:
           npx resumed export content/data/resume.json --output output/pdf/CV.pdf --theme jsonresume-theme-even 
           echo "CV.pdf successfully generated at content/pdf/CV.pdf"
           
-          # Step 3: Clean up the intermediate build directory and its contents.
-          rm -rf .build
+          # # Step 3: Clean up the intermediate build directory and its contents.
+          # rm -rf .build
 
       - name: Build website with Pelican
         run: |
