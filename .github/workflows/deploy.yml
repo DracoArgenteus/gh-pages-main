@@ -19,7 +19,7 @@ permissions:
 # Allow only one concurrent deployment, and disallow cancel in-progress runs.
 concurrency:
   group: "pages"
-  cancel-in-progress: cancel
+  cancel-in-progress: false
 
 jobs:
   build:
