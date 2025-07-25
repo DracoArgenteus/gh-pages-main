@@ -41,7 +41,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
           # install @rbardini/resumed and the jsonresume-theme-class theme 
-          npm install resumed jsonresume-theme-class # or your theme of choice
+          npm install @rbardini/resumed jsonresume-theme-class # or your theme of choice
 
       - name: Generate PDF from CV
         run: |
@@ -55,9 +55,9 @@ jobs:
           
           # Step 2: Generate the PDF, reading the temporary JSON file from the .build directory.
           echo "Validating resume.json"
-          resumed validate .build/resume.json
+          npx resumed validate .build/resume.json
           
-          resumed export .build/resume.json --output output/pdf/CV.pdf --theme jsonresume-theme-class 
+          npx resumed export .build/resume.json --output output/pdf/CV.pdf --theme jsonresume-theme-class 
           echo "CV.pdf successfully generated at content/pdf/CV.pdf"
           
           # Step 3: Clean up the intermediate build directory and its contents.
